@@ -16,6 +16,12 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_launcher_icons: "^0.8.0"
+  carousel_slider: ^1.3.1
+  audioplayers: ^0.13.5
+  video_player: ^1.0.1
+  speech_to_text: ^2.3.0
+  highlight_text: ^0.7.2
+  avatar_glow: ^1.2.0
 
 flutter_icons:
   android: true
@@ -35,3 +41,398 @@ flutter:
     - images/1.jpeg
     - images/2.jpeg
     - images/3.png
+    - images/alp.png
+    - images/romdy.png
+    - images/abc.png
+    - images/animals.jpg
+    - images/u.jpg
+    - images/colors.jpg
+    - images/number.jpg
+    - images/parts.jpg
+    - images/days.jpg
+    - images/monthes.PNG
+    - images/birds.jpg
+    - images/clothes.jpg
+    - images/vecl.png
+    - images/shr.jpg
+    - images/veg.jpg
+    - images/shape.jpg
+    - images/qr.jpg
+    - images/final.jpg
+    - images/back.jpg
+    - images/u.jpg
+    - images/fish.gif
+    - images/ve.gif
+    - images/b.png
+    - images/alp/arrow2.png
+    - images/alp/background.png
+    - images/alp/h.png
+    - images/alp/lion.png
+    - images/alp/duck.png
+    - images/alp/croco.png
+    - images/alp/fox.png
+    - images/alp/giraffe.png
+    - images/alp/zebra.png
+    - images/alp/خروف.png
+    - images/alp/ديك.png
+    - images/alp/ذئب.png
+    - images/alp/رقون.png
+    - images/alp/زرافة.png
+    - images/alp/سنجاب.png
+    - images/alp/شبل.png
+    - images/alp/صقر.png
+    - images/alp/ضفدع.png
+    - images/alp/طاووس.png
+    - images/alp/ظبي.png
+    - images/alp/عصفور.png
+    - images/alp/غزال.png
+    - images/alp/فيل.png
+    - images/alp/قطة.png
+    - images/alp/كلب.png
+    - images/alp/ماعز.png
+    - images/alp/نمر.png
+    - images/alp/هدهد.png
+    - images/alp/وحيد.png
+    - images/alp/يمامة.png
+    - images/clo/boot.png
+    - images/clo/cap.png
+    - images/clo/dress.png
+    - images/clo/glaves.png
+    - images/clo/hat.png
+    - images/clo/jaket.png
+    - images/clo/jeans.png
+    - images/clo/shirt.png
+    - images/clo/skrit.png
+    - images/clo/clo.png
+    - images/clo/ba.jpg
+    - images/co/co.jpg
+    - images/co/red.png
+    - images/co/orange.png
+    - images/co/yellow.png
+    - images/co/green.png
+    - images/co/blue.png
+    - images/co/pu.png
+    - images/eng/animal2.png
+    - images/eng/animal3.png
+    - images/eng/animal6.png
+    - images/eng/animal8.png
+    - images/eng/animal12.png
+    - images/eng/animal17.png
+    - images/eng/panda.png
+    - images/eng/animal28.png
+    - images/eng/animal30.png
+    - images/eng/apple.png
+    - images/eng/fruits9.png
+    - images/eng/fruits17.png
+    - images/eng/guitar.png
+    - images/eng/hand.png
+    - images/eng/ice.png
+    - images/eng/jug.png
+    - images/eng/kangaroo.png
+    - images/eng/nut.png
+    - images/eng/octopus.png
+    - images/eng/queen.png
+    - images/eng/robot.png
+    - images/eng/sun.png
+    - images/eng/umbrella.png
+    - images/eng/violin.png
+    - images/eng/waterme.png
+    - images/eng/xylophone.png
+    - images/eng/yacht.png
+    - images/videoback.jpg
+    - images/month/a.jpg
+    - images/month/b.jpg
+    - images/month/c.jpg
+    - images/month/d.jpg
+    - images/month/e.jpg
+    - images/arrow.png
+    - images/english.jpeg
+    - images/alpa.jpeg
+    - images/coq.jpg
+    - assets/خروف.mp3
+    - assets/ديك.mp3
+    - assets/ذئب.mp3
+    - assets/رقون.mp3
+    - assets/زرافة.mp3
+    - assets/سنجاب.mp3
+    - assets/شبل.mp3
+    - assets/صقر.mp3
+    - assets/ضفدع.mp3
+    - assets/طاووس.mp3
+    - assets/ظبي.mp3
+    - assets/عصفور.mp3
+    - assets/غزال.mp3
+    - assets/فيل.mp3
+    - assets/قطة.mp3
+    - assets/كلب.mp3
+    - assets/ماعز.mp3
+    - assets/نمر.mp3
+    - assets/هدهد.mp3
+    - assets/وحيد.mp3
+    - assets/يمامة.mp3
+    - assets/ggg.mp3
+    - assets/aa.mp3
+    - assets/bb.mp3
+    - assets/tt.mp3
+    - assets/ss.mp3
+    - assets/gg.mp3
+    - assets/hh.mp3
+    - assets/boot.mp3
+    - assets/cap.mp3
+    - assets/claves.mp3
+    - assets/dress.mp3
+    - assets/hat.mp3
+    - assets/jeaket.mp3
+    - assets/jeans.mp3
+    - assets/shirt.mp3
+    - assets/skrit.mp3
+    - assets/pu.mp3
+    - assets/orange.mp3
+    - assets/blue.mp3
+    - assets/green.mp3
+    - assets/yellow.mp3
+    - assets/red.mp3
+    - assets/a.mp3
+    - assets/b.mp3
+    - assets/c.mp3
+    - assets/d.mp3
+    - assets/d.mp3
+    - assets/e.mp3
+    - assets/f.mp3
+    - assets/g.mp3
+    - assets/h.mp3
+    - assets/i.mp3
+    - assets/j.mp3
+    - assets/k.mp3
+    - assets/l.mp3
+    - assets/m.mp3
+    - assets/n.mp3
+    - assets/o.mp3
+    - assets/p.mp3
+    - assets/q.mp3
+    - assets/r.mp3
+    - assets/s.mp3
+    - assets/t.mp3
+    - assets/u.mp3
+    - assets/v.mp3
+    - assets/w.mp3
+    - assets/x.mp3
+    - assets/y.mp3
+    - assets/z.mp3
+    - assets/true.mp3
+    - assets/covideo.mp4
+    - images/Body Parts/Face1.png
+    - images/Body Parts/Face2.png
+    - images/Body Parts/Face3.png
+    - images/Body Parts/Face4.png
+    - images/Body Parts/Face5.png
+    - images/Body Parts/Eye1.png
+    - images/Body Parts/Eye2.png
+    - images/Body Parts/Eye3.png
+    - images/Body Parts/Eyebrows1.png
+    - images/Body Parts/eyebrow.png
+    - images/Body Parts/Hair.png
+    - images/Body Parts/Nose1.png
+    - images/Body Parts/Nose2.png
+    - images/Body Parts/Mouth.png
+    - images/Body Parts/Lips.png
+    - images/Body Parts/Teeth.png
+    - images/Body Parts/Tongue.png
+    - images/Body Parts/Ear1.png
+    - images/Body Parts/Ear2.png
+    - images/Body Parts/Ear3.png
+    - images/Body Parts/Hand.png
+    - images/Body Parts/Hands.png
+    - images/Body Parts/Arm.png
+    - images/Body Parts/Foot.png
+    - images/Body Parts/Foot1.jpg
+    - images/Body Parts/Feet.png
+    - images/Body Parts/Feet2.png
+    - images/Body Parts/Leg1.webp
+    - images/Body Parts/Leg2.png
+    - assets/Sparrow.mp3
+    - images/Vehicles/bicycle.png
+    - images/Vehicles/bicycle2.png
+    - images/Vehicles/scooter.png
+    - images/Vehicles/car.png
+    - images/Vehicles/policecar.png
+    - images/Vehicles/van.png
+    - images/Vehicles/bus2.png
+    - images/Vehicles/schoolbus2.png
+    - images/Vehicles/firetruck.png
+    - images/Vehicles/ambulance.png
+    - images/Vehicles/ambulance2.png
+    - images/Vehicles/train.png
+    - images/Vehicles/boat.png
+    - images/Vehicles/ship.png
+    - images/Vehicles/airplane.png
+    - images/Vehicles/rocket.png
+    - images/Vehicles/bus.png
+    - images/Birds/bat.png
+    - images/Birds/cock.png
+    - images/Birds/ducks.png
+    - images/Birds/flamingo.png
+    - images/Birds/hen.png
+    - images/Birds/owl.png
+    - images/Birds/Swan.png
+    - images/Birds/parrot.png
+    - images/Birds/peacock.png
+    - images/Birds/pinguin.png
+    - images/Birds/sparrow.png
+    - images/Week-days/saturday.png
+    - images/Week-days/sunday.png
+    - images/Week-days/monday.png
+    - images/Week-days/tuesday.png
+    - images/Week-days/wednesday.png
+    - images/Week-days/thursday.png
+    - images/Week-days/friday.png
+    - images/qurran/alfatha.jpg
+    - images/qurran/alekhlas.jpg
+    - images/qurran/alfalaq.jpg
+    - images/qurran/alnas.jpg
+    - images/kuraan/alfathah.jpg
+    - images/kuraan/alfathah1.jpg
+    - images/animals/cat.png
+    - images/animals/cow.png
+    - images/animals/dog.png
+    - images/animals/elephant.png
+    - images/animals/horse.png
+    - images/animals/lion.png
+    - images/animals/monkey.png
+    - images/animals/rabbit.png
+    - images/animals/sheep.png
+    - images/animals/tiger.png
+    - images/numbers/one.png
+    - images/numbers/two.png
+    - images/numbers/three.png
+    - images/numbers/four.png
+    - images/numbers/five.png
+    - images/numbers/six.png
+    - images/numbers/seven.png
+    - images/numbers/eight.png
+    - images/numbers/nine.png
+    - images/numbers/ten.png
+    - images/seasons/summer.jpg
+    - images/seasons/winter.jpg
+    - images/seasons/spring.png
+    - images/seasons/fall.jpg
+    - images/month/jan.jpg
+    - images/month/feb.jpg
+    - images/month/mar.jpg
+    - images/month/april.jpg
+    - images/month/may.jpg
+    - images/month/jun.jpg
+    - images/month/jul.jpg
+    - images/month/aug.jpg
+    - images/month/sep.jpg
+    - images/month/oct.jpg
+    - images/month/nov.jpg
+    - images/month/dec.jpg
+    - images/shape/rec.jpg
+    - images/shape/star.jpg
+    - images/shape/square.jpg
+    - images/shape/triangle.jpg
+    - images/veg/pear.jpg
+    - images/veg/peach.jpg
+    - images/veg/orange.jpg
+    - images/veg/onion.jpg
+    - images/veg/grapes.jpg
+    - images/veg/cuc.jpg
+    - images/veg/carr.jpg
+    - images/veg/cabb.jpg
+    - images/veg/broc.jpg
+    - images/veg/apple.jpg
+    - images/veg/bana.jpg
+    - images/qurran/AwlSura.jpg
+    - images/qurran/AlfathaQuiz.jpg
+    - images/qurran/AlekhlasQuiz.jpg
+    - images/qurran/AlfalaqQuiz.jpg
+    - images/qurran/AlnasQuiz.jpg
+    - images/BackgroundQuiz/Back1.jpg
+    - images/Week-days/OrderDays1.jpg
+    - images/Week-days/OrderDays2.jpg
+    - images/Week-days/CompleteDays.jpg
+    - images/Week-days/RandomDays.png
+    - images/Week-days/DaysStairs.png
+    - images/seasons/qfall.png
+    - images/seasons//qwinter.png
+    - images/seasons//qspring.jpg
+    - images/seasons//qsummer.png
+    - images/seasons//Seasons.jpg
+    - images/si.png
+    - images/yi.png
+    - images/ti.png
+    - assets/ggg.mp3
+    - assets/Hen.mp3
+    - assets/Cock.mp3
+    - assets/Duck.mp3
+    - assets/Swan.mp3
+    - assets/Penguin.mp3
+    - assets/Owl.mp3
+    - assets/Parrot.mp3
+    - assets/Peacock.mp3
+    - assets/Flamingo.mp3
+    - assets/Saturday.mp3
+    - assets/Monday.mp3
+    - assets/Tuesday.mp3
+    - assets/Wednesday.mp3
+    - assets/Thursday.mp3
+    - assets/Friday.mp3
+    - assets/Sunday.mp3
+    - assets/nas.mp3
+    - assets/fala.mp3
+    - assets/fata.mp3
+    - assets/ekl.mp3
+    - assets/jul.mp3
+    - assets/jun.mp3
+    - assets/mar.mp3
+    - assets/may.mp3
+    - assets/nov.mp3
+    - assets/oct.mp3
+    - assets/sep.mp3
+    - assets/jan.mp3
+    - assets/feb.mp3
+    - assets/aug.mp3
+    - assets/dec.mp3
+    - assets/april.mp3
+    - assets/star.mp3
+    - assets/square.mp3
+    - assets/rec.mp3
+    - assets/circle.mp3
+    - assets/apple.mp3
+    - assets/pear.mp3
+    - assets/onion.mp3
+    - assets/Hair.mp3
+    - assets/Eyes.mp3
+    - assets/Nose.mp3
+    - assets/Mouth.mp3
+    - assets/Tongue.mp3
+    - assets/Teeth.mp3
+    - assets/Ears.mp3
+    - assets/Hands.mp3
+    - assets/Feet.mp3
+    - assets/Legs.mp3
+    - assets/Bicycle.mp3
+    - assets/Scooter.mp3
+    - assets/Car.mp3
+    - assets/Police Car.mp3
+    - assets/Bus.mp3
+    - assets/Fire Truck.mp3
+    - assets/Train.mp3
+    - assets/Ship.mp3
+    - assets/Airplane.mp3
+    - assets/Rocket.mp3
+    - assets/clovideo.mp4
+    - assets/alpvideo.mp4
+    - assets/engvideo.mp4
+    - assets/animalvideo.mp4
+    - assets/birdvideo.mp4
+    - assets/qravideo.webm
+    - assets/dayvideo.webm
+    - assets/vehvideo.mp4
+    - assets/bodyvideo.mp4
+    - assets/numbervideo.mp4
+    - assets/shapevideo.mp4
+    - assets/vfvideo.mp4
+    - assets/seasonvideo.mp4
+    - assets/monthvideo.mp4

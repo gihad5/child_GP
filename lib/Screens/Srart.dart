@@ -23,7 +23,12 @@ class Start extends StatelessWidget {
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {Navigator.pushNamed(context, LogInScreen.id);},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LogInScreen()));
+                    },
                     color: Colors.teal[300],
                     child: Text(
                       "Start",
@@ -37,7 +42,11 @@ class Start extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10),
-              child: Icon(Icons.arrow_forward_ios_sharp,color: Colors.teal[300],size: 50 ,),
+              child: Icon(
+                Icons.arrow_forward_ios_sharp,
+                color: Colors.teal[300],
+                size: 50,
+              ),
             )
           ],
         ));

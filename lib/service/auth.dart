@@ -15,5 +15,4 @@ class Auth {
         email: email, password: password);
     return authResult;
   }
- 
 }

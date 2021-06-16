@@ -73,7 +73,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.transparent),
-                        child: Image.asset('images/b.png'),
+                        child: Image.asset('images/bb.png'),
                         height: 80,
                         width: 180,
                         // style: TextStyle(color: Colors.yellow, fontSize: 25),
@@ -1052,7 +1052,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Final()));
+                                    builder: (context) => FinalExam()));
                           },
                           child: Padding(
                             padding: EdgeInsets.all(10.0),

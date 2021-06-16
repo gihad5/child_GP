@@ -70,7 +70,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                       SizedBox(height: 30),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("swinter.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white70,
@@ -117,7 +117,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                       SizedBox(height: 30),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("sspring.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white70,
@@ -161,7 +161,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                       SizedBox(height: 30),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("ssummer.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white70,
@@ -206,7 +206,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                       SizedBox(height: 30),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("sautumn.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white70,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kido/home.dart';
 import 'package:kido/rana/bird_quiz.dart';
 import 'package:kido/rana/day_quiz.dart';
 import 'package:kido/rana/qra_quiz.dart';
@@ -12,15 +13,15 @@ class Result extends StatelessWidget {
 //Remark Logic
   String get resultPhrase {
     String resultText;
-    if (resultScore >= 10) {
+    if (resultScore >= 25) {
       resultText = 'You are awesome!';
       print(resultScore);
-    } else if (resultScore >= 8) {
+    } else if (resultScore >= 20) {
       resultText = 'Pretty likeable!';
       print(resultScore);
-    } else if (resultScore >= 6) {
+    } else if (resultScore >= 15) {
       resultText = 'You need to work more!';
-    } else if (resultScore >= 4) {
+    } else if (resultScore >= 10) {
       resultText = 'You need to work hard!';
     } else {
       resultText = 'This is a poor score!';
@@ -67,7 +68,7 @@ class Result extends StatelessWidget {
 		), //FlatButton
 		], //<Widget>[]*/
           TextButton(
-            child: Text('Restart Quiz!',
+            child: Text('End',
                 style: TextStyle(
                   fontSize: 21,
                   fontWeight: FontWeight.w600,
@@ -83,7 +84,10 @@ class Result extends StatelessWidget {
                   borderRadius: BorderRadius.circular(24.0),
                   //side: BorderSide(color: Colors.red[50])
                 ))),
-            onPressed: () => resetHandler(),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Home()));
+            },
           ),
         ],
       ), //Column

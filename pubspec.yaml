@@ -40,7 +40,6 @@ flutter:
   assets:
     - images/1.jpeg
     - images/2.jpeg
-    - images/3.png
     - images/alp.png
     - images/romdy.png
     - images/abc.png
@@ -63,7 +62,7 @@ flutter:
     - images/u.jpg
     - images/fish.gif
     - images/ve.gif
-    - images/b.png
+    - images/bb.png
     - images/alp/arrow2.png
     - images/alp/background.png
     - images/alp/h.png
@@ -219,6 +218,30 @@ flutter:
     - assets/x.mp3
     - assets/y.mp3
     - assets/z.mp3
+    - assets/one.mp3
+    - assets/two.mp3
+    - assets/three.mp3
+    - assets/four.mp3
+    - assets/five.mp3
+    - assets/six.mp3
+    - assets/seven.mp3
+    - assets/eight.mp3
+    - assets/nine.mp3
+    - assets/ten.mp3
+    - assets/acow.mp3
+    - assets/acat.mp3
+    - assets/aelephant.mp3
+    - assets/adog.mp3
+    - assets/ahorse.mp3
+    - assets/alion.mp3
+    - assets/amonkey.mp3
+    - assets/arabbit.mp3
+    - assets/asheep.mp3
+    - assets/atiger.mp3
+    - assets/sautumn.mp3
+    - assets/sspring.mp3
+    - assets/ssummer.mp3
+    - assets/swinter.mp3
     - assets/true.mp3
     - assets/covideo.mp4
     - images/Body Parts/Face1.png
@@ -343,6 +366,8 @@ flutter:
     - images/veg/broc.jpg
     - images/veg/apple.jpg
     - images/veg/bana.jpg
+    - images/veg/carrot.png
+    - images/veg/cucu.png
     - images/qurran/AwlSura.jpg
     - images/qurran/AlfathaQuiz.jpg
     - images/qurran/AlekhlasQuiz.jpg
@@ -359,6 +384,11 @@ flutter:
     - images/seasons//qspring.jpg
     - images/seasons//qsummer.png
     - images/seasons//Seasons.jpg
+    - images/shape/square.png
+    - images/shape/triangle.png
+    - images/numbers/b.png
+    - images/numbers/s.png
+    - images/kuraan/f.jpg
     - images/si.png
     - images/yi.png
     - images/ti.png

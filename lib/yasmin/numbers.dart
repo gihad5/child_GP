@@ -74,7 +74,7 @@ class _NumberSliderState extends State<NumberSlider> {
 
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("one.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -118,7 +118,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("two.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -163,7 +163,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("three.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -207,7 +207,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("four.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -251,7 +251,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("five.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -295,7 +295,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("six.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -339,7 +339,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("seven.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -383,7 +383,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("eight.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -427,7 +427,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("nine.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -471,7 +471,7 @@ class _NumberSliderState extends State<NumberSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("ten.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,

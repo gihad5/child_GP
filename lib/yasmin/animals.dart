@@ -74,7 +74,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
 
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("acat.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -118,7 +118,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("adog.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -163,7 +163,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("asheep.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -207,7 +207,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("ahorse.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -251,7 +251,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("aelephant.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -295,7 +295,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("alion.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -339,7 +339,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("arabbit.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -383,7 +383,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("amonkey.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -427,7 +427,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("atiger.mp3");
                         },
                         elevation: 2.0,
                         fillColor: Colors.white,
@@ -471,7 +471,7 @@ class _AnimalSliderState extends State<AnimalSlider> {
                       SizedBox(height: 50),
                       RawMaterialButton(
                         onPressed: () {
-                          audioCache.play("Sunday.mp3");
+                          audioCache.play("acow.mp3");
                         },
                         elevation: 2.0,
                         //fillColor: Colors.white,

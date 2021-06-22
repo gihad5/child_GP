@@ -29,7 +29,20 @@ class _BirdSlideState extends State<BirdSlide> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      
+       appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+          centerTitle: true,
+          title: Text("The Birds"),
+          backgroundColor: Colors.teal[300],
+        ),
         body: Container(
+          
           margin: EdgeInsets.fromLTRB(20, 115, 20, 115),
           height: 450,
           // color: Colors.red[100],
@@ -466,7 +479,7 @@ class _BirdSlideState extends State<BirdSlide> {
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
-                          color: Colors.blue[800], // button color
+                          color: Colors.teal[400], // button color
                           child: InkWell(
                             splashColor: Colors.blue[100], // inkwell color
                             child: SizedBox(
@@ -488,7 +501,7 @@ class _BirdSlideState extends State<BirdSlide> {
                   ]),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(60.0),
-                    color: Colors.blue[100],
+                    color: Colors.teal[50],
                   )),
               Container(width: 70.0, color: Colors.white10),
               Container(
@@ -606,9 +619,6 @@ class _BirdSlideState extends State<BirdSlide> {
           ),
         ),
         //backgroundColor: Color.fromRGBO(255, 204, 204, 1.0) ,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("The Birds"),
-        ));
+       );
   }
 }

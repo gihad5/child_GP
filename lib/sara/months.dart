@@ -45,16 +45,17 @@ class _MonthSliderState extends State<MonthSlider> {
               },
               icon: Image.asset('images/arrow.png'),
             ),
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.teal[300],
             elevation: 0.0,
             centerTitle: true,
             title: Text(
-              "Monthes",
+              "Months",
               style: TextStyle(fontFamily: 'Comic'),
             ),
           ),
           backgroundColor: Colors.white,
           body: Center(
+            
               child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

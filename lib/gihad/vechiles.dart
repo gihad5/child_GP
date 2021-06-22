@@ -29,13 +29,25 @@ class _TransportSlideState extends State<TransportSlide> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+          centerTitle: true,
+          title: Text("Vehicles"),
+          backgroundColor: Colors.teal[300],
+        ),
         body: Container(
-          /*  decoration: BoxDecoration(
-                   image: DecorationImage(
-                        image: AssetImage("BackgroundQuiz/Back5.png"),
-                        fit: BoxFit.cover)),*/
-          margin: EdgeInsets.fromLTRB(20, 115, 20, 115),
-          height: 500,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('images/coq.jpg'),
+            fit: BoxFit.fill,
+          )),
+          margin: EdgeInsets.fromLTRB(20, 70, 20, 80),
+          height: 700,
           // color: Colors.red[100],
           width: double.infinity,
 
@@ -46,13 +58,13 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 65,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 130,
                         child: Image.asset('images/Vehicles/bicycle.png')),
                     SizedBox(
-                      height: 30,
+                      height: 65,
                     ),
                     SizedBox(
                       height: 50,
@@ -61,7 +73,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -69,7 +81,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -107,14 +119,14 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 64,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 130,
                         width: 250,
                         child: Image.asset('images/Vehicles/scooter.png')),
                     SizedBox(
-                      height: 30,
+                      height: 63,
                     ),
                     SizedBox(
                       height: 50,
@@ -123,7 +135,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -131,7 +143,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -164,14 +176,14 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 57,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 130,
                         width: 250,
                         child: Image.asset('images/Vehicles/car.png')),
                     SizedBox(
-                      height: 50,
+                      height: 65,
                     ),
                     SizedBox(
                       height: 50,
@@ -180,7 +192,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -188,7 +200,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -221,13 +233,13 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 60,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 130,
                         child: Image.asset('images/Vehicles/policecar.png')),
                     SizedBox(
-                      height: 40,
+                      height: 60,
                     ),
                     SizedBox(
                       height: 50,
@@ -236,7 +248,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -244,7 +256,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -277,14 +289,14 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 85,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 130,
                         width: 280,
                         child: Image.asset('images/Vehicles/bus.png')),
                     SizedBox(
-                      height: 40,
+                      height: 55,
                     ),
                     SizedBox(
                       height: 50,
@@ -293,7 +305,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -301,7 +313,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -334,14 +346,14 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 88,
+                      height: 130,
                     ),
                     SizedBox(
                         height: 120,
                         width: 250,
                         child: Image.asset('images/Vehicles/firetruck.png')),
                     SizedBox(
-                      height: 50,
+                      height: 60,
                     ),
                     SizedBox(
                       height: 50,
@@ -350,7 +362,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -358,7 +370,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 22,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -391,14 +403,14 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 27,
+                      height: 80,
                     ),
                     SizedBox(
                         height: 200,
                         width: 280,
                         child: Image.asset('images/Vehicles/train.png')),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     SizedBox(
                       height: 50,
@@ -407,7 +419,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -415,7 +427,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -448,13 +460,13 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 73,
+                      height: 90,
                     ),
                     SizedBox(
                         height: 130,
                         child: Image.asset('images/Vehicles/ship.png')),
                     SizedBox(
-                      height: 50,
+                      height: 75,
                     ),
                     SizedBox(
                       height: 50,
@@ -463,7 +475,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -471,7 +483,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -504,13 +516,13 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 75,
+                      height: 100,
                     ),
                     SizedBox(
                         height: 120,
                         child: Image.asset('images/Vehicles/airplane.png')),
                     SizedBox(
-                      height: 50,
+                      height: 70,
                     ),
                     SizedBox(
                       height: 50,
@@ -519,7 +531,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -527,7 +539,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -560,13 +572,13 @@ class _TransportSlideState extends State<TransportSlide> {
                   width: 320,
                   child: Column(children: [
                     SizedBox(
-                      height: 60,
+                      height: 90,
                     ),
                     SizedBox(
                         height: 130,
                         child: Image.asset('images/Vehicles/rocket.png')),
                     SizedBox(
-                      height: 50,
+                      height: 65,
                     ),
                     SizedBox(
                       height: 50,
@@ -575,7 +587,7 @@ class _TransportSlideState extends State<TransportSlide> {
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black54,
+                          color: Colors.grey[800],
                         ),
                       ),
                     ),
@@ -583,7 +595,7 @@ class _TransportSlideState extends State<TransportSlide> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -615,9 +627,6 @@ class _TransportSlideState extends State<TransportSlide> {
           ),
         ),
         //backgroundColor: Color.fromRGBO(255, 204, 204, 1.0) ,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Vehicles"),
-        ));
+        );
   }
 }

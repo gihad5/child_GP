@@ -17,7 +17,7 @@ class _AlpQuizeState extends State<AlpQuize> {
     '🐕': "ك",
     '🐘': "ف",
     '🐒': "ق",
-    '🦓': "ح",
+    '🐎': "ح",
   };
   int index = 0;
   @override
@@ -39,7 +39,7 @@ class _AlpQuizeState extends State<AlpQuize> {
         elevation: 0.0,
         centerTitle: true,
         title: Text(
-          " Quize ",
+          " Quiz ",
           style: TextStyle(fontFamily: 'Comic'),
         ),
       ),

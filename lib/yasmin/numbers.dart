@@ -34,27 +34,37 @@ class _NumberSliderState extends State<NumberSlider> {
         primarySwatch: Colors.indigo,
       ),
       home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: Text('Numbers')),
+        appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
+          centerTitle: true, 
+          title: Text('Numbers')),
+
         body: Container(
           height: 800,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               Container(
-                  width: 411,
+                  width: 360,
                   color: Colors.red[100],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 50),
+                      SizedBox(height: 70),
 
                       Image.asset('images/numbers/one.png'),
 
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
 
@@ -70,7 +80,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
 
                       RawMaterialButton(
                         onPressed: () {
@@ -81,26 +91,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.amber[400],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.amber[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/two.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -115,7 +126,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("two.mp3");
@@ -125,26 +136,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.cyan[200],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.cyan[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      // SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/three.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
 
@@ -160,7 +172,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("three.mp3");
@@ -170,26 +182,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.teal[300],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.teal[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/four.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -204,7 +217,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("four.mp3");
@@ -214,26 +227,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.purple[200],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.purple[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/five.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -248,7 +262,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("five.mp3");
@@ -258,26 +272,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
+                  width: 360,
                   color: Colors.pink[100],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/six.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -292,7 +307,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("six.mp3");
@@ -302,26 +317,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.purple[200],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.yellow[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/seven.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -336,7 +352,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("seven.mp3");
@@ -346,26 +362,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.cyan[200],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.cyan[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/eight.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -380,7 +397,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("eight.mp3");
@@ -390,26 +407,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
+                  width: 360,
                   color: Colors.amber[400],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/nine.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -424,7 +442,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("nine.mp3");
@@ -434,26 +452,27 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
                       ),
                     ],
                   )),
+                  Container(width: 70.0, color: Colors.white10),
               Container(
-                  width: 411,
-                  color: Colors.cyan[200],
-                  padding: EdgeInsets.all(16.0),
+                  width: 360,
+                  color: Colors.cyan[100],
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 70),
                       Image.asset('images/numbers/ten.png'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -468,7 +487,7 @@ class _NumberSliderState extends State<NumberSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 50),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("ten.mp3");
@@ -478,7 +497,7 @@ class _NumberSliderState extends State<NumberSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),

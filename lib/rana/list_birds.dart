@@ -12,6 +12,12 @@ class Listbirds extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
         centerTitle: true,
         title: Text("Birds"),
         backgroundColor: Colors.teal[300],
@@ -102,7 +108,7 @@ class Listbirds extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BirdQuiz()));
+                        MaterialPageRoute(builder: (context) => BirdsQuiz()));
                   },
                   child: Image(
                     image: AssetImage("images/ti.png"),

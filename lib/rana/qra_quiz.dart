@@ -124,9 +124,15 @@ class _QuranQuizState extends State<QuranQuiz> {
                 fit: BoxFit.cover)),
         child: Scaffold(
           appBar: AppBar(
+            leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
             centerTitle: true,
-            title: Text('Quiz of Birds'),
-            backgroundColor: Color(0x3F00E676),
+            title: Text('Quiz'),
+            backgroundColor: Colors.teal[300],
           ),
           body: Padding(
             padding: const EdgeInsets.all(30.0),

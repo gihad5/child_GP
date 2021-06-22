@@ -11,8 +11,15 @@ class _FinalExamState extends State<FinalExam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
         backgroundColor: Colors.teal[300],
-        title: Text("          Final Exam "),
+        centerTitle: true,
+        title: Text(" Final Exam "),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

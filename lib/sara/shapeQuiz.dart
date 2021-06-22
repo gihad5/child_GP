@@ -14,9 +14,9 @@ class _ShapeQuizState extends State<ShapeQuiz> {
   Map<String, bool> score = {};
   Map<String, String> choices = {
     '⬛': "Square",
-    '🔵': "circle",
+    '🔵': "Circle",
     '🔺': "Triangle",
-    '⭐': "star",
+    '⭐': "Star",
     '♦️': "Diamond",
   };
   int index = 0;
@@ -44,11 +44,11 @@ class _ShapeQuizState extends State<ShapeQuiz> {
         ),
       ),
       body: Container(
-          /* decoration: BoxDecoration(
-              /*image: DecorationImage(
+           decoration: BoxDecoration(
+            image: DecorationImage(
             image: AssetImage('images/coq.jpg'),
             fit: BoxFit.fill,
-          )*/),*/
+          )),
           child: Container(
         child: Column(
           children: [
@@ -56,7 +56,7 @@ class _ShapeQuizState extends State<ShapeQuiz> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 new Text(
-                  "Your Score: $finalScore",
+                  "Score: $finalScore",
                   style: new TextStyle(
                     fontSize: 22.0,
                   ),

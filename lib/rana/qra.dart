@@ -29,6 +29,17 @@ class _QuranSliderState extends State<QuranSlider> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
+          centerTitle: true,
+          title: Text("القرآن الكريم", textAlign: TextAlign.center),
+        ),
         body: Container(
           margin: EdgeInsets.fromLTRB(20, 100, 20, 115),
           height: 430,
@@ -221,9 +232,6 @@ class _QuranSliderState extends State<QuranSlider> {
         ),
 
         // backgroundColor: Color.fromRGBO(255, 204, 204, 1.0) ,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("القرآن الكريم", textAlign: TextAlign.center),
-        ));
+       );
   }
 }

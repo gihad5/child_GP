@@ -5,7 +5,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.10.5 <3.0.0"
   
 
 dependencies:
@@ -69,18 +69,19 @@ flutter:
     - images/alp/lion.png
     - images/alp/duck.png
     - images/alp/croco.png
-    - images/alp/fox.png
-    - images/alp/giraffe.png
-    - images/alp/zebra.png
+    - images/alp/Fox0.png
+    - images/alp/Fox1.jpg
+    - images/alp/Camel.png
+    - images/alp/Horse.png
     - images/alp/خروف.png
-    - images/alp/ديك.png
+    - images/Birds/cock.png
     - images/alp/ذئب.png
     - images/alp/رقون.png
     - images/alp/زرافة.png
-    - images/alp/سنجاب.png
+    - images/alp/Sengap.png
     - images/alp/شبل.png
     - images/alp/صقر.png
-    - images/alp/ضفدع.png
+    - images/alp/Frog.jpg
     - images/alp/طاووس.png
     - images/alp/ظبي.png
     - images/alp/عصفور.png

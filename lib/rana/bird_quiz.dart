@@ -1,209 +1,171 @@
+import 'dart:math';
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
-import 'package:kido/rana/answer.dart';
-import 'package:kido/rana/result.dart';
-import 'package:kido/rana/question.dart';
 
-class Quiz extends StatelessWidget {
-  final List<Map<String, Object>> questions;
-  final int questionIndex;
-  final Function answerQuestion;
+var finalScore = 0;
 
-  Quiz({
-    @required this.questions,
-    @required this.answerQuestion,
-    @required this.questionIndex,
-  });
-
+class BirdsQuiz extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Question(
-          questions[questionIndex]['questionText'],
-          questions[questionIndex]['img'],
-        ), //Question
-        ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
-            .map((answer) {
-          return Answer(() => answerQuestion(answer['score']), answer['text']);
-        }).toList()
-      ],
-    ); //Column
-  }
+  _BirdsQuizState createState() => _BirdsQuizState();
 }
 
-class BirdQuiz extends StatefulWidget {
+class _BirdsQuizState extends State<BirdsQuiz> {
+  var player = AudioCache();
+  Map<String, bool> score = {};
+  Map<String, String> choices = {
+    '🦩': "Flamingo",
+    '🦉': "Owl",
+    '🦚': "Peacock",
+    '🦢': "Swan",
+    '🦜': "Parrot"
+  };
+  int index = 0;
   @override
-  _BirdQuizState createState() => _BirdQuizState();
-}
-
-class _BirdQuizState extends State<BirdQuiz> {
-  final _questions = [
-    //  Container(
-    // child: ListView(
-    //  children: <Widget>[
-    //         Container(
-    //             width: 320,
-    //   child: Column(
-    //     children : [
-    //       SizedBox(
-    //       height: 200,
-    //       child: Image.asset('Birds/sparrow.png'),
-    //       ),
-    //'questionText': 'Q1. Who created Flutter?'
-    //SizedBox(
-
-    //child: ('questionText': 'Q1. Who created Flutter?',) ,
-    //),
-    //  ]))])), List<Map<String, Object>>
-
-    {
-      'img': 'images/Birds/flamingo.png',
-      'questionText': 'Q1. What is the name of this bird?',
-      'answers': [
-        //{'child': Image.asset('Bird/flammngo.png')},
-        {'text': 'Bat', 'score': 0},
-        {'text': 'Swan', 'score': 0},
-        {'text': 'Flamingo', 'score': 1},
-        {'text': 'Parrot', 'score': 0},
-      ],
-    },
-    {
-      'img': 'images/Birds/pinguin.png',
-      'questionText': 'Q2. What is the name of this bird?',
-      'answers': [
-        {'text': 'Swan', 'score': 0},
-        {'text': 'Owl', 'score': 0},
-        {'text': 'Duck', 'score': 0},
-        {'text': 'Penguin', 'score': 1},
-      ],
-    },
-    {
-      'img': 'images/Birds/sparrow.png',
-      'questionText': ' Q3. What is the name of this bird?',
-      'answers': [
-        {'text': 'Parrot', 'score': 0},
-        {'text': 'Sparrow', 'score': 1},
-        {'text': 'Peacock', 'score': 0},
-        {'text': 'Chicken', 'score': 0},
-      ],
-    },
-    {
-      'img': 'images/Birds/ducks.png',
-      'questionText': 'Q4. What is the name of this bird?',
-      'answers': [
-        {'text': 'Butterfly', 'score': 0},
-        {'text': 'Owl', 'score': 0},
-        {'text': 'Duck', 'score': 1},
-        {'text': 'Cock', 'score': 0},
-      ],
-    },
-    {
-      'img': 'images/Birds/Swan.png',
-      'questionText': 'Q5. What is the name of this bird?',
-      'answers': [
-        {'text': 'Swan', 'score': 1},
-        {'text': 'Parrot', 'score': 0},
-        {'text': 'Owl', 'score': 0},
-        {'text': 'Rooster', 'score': 0},
-      ],
-    },
-
-    {
-      'img': 'images/Birds/hen.png',
-      'questionText': 'Q6. Is this a Hen?',
-      'answers': [
-        {'text': 'Yes', 'score': 1},
-        {'text': 'No', 'score': 0},
-      ],
-    },
-
-    {
-      'img': 'images/Birds/peacock.png',
-      'questionText': 'Q7. Is this a ButterFly?',
-      'answers': [
-        {'text': 'Yes', 'score': 0},
-        {'text': 'No', 'score': 1},
-      ],
-    },
-
-    {
-      'img': 'images/Birds/bat.png',
-      'questionText': 'Q8. Is this a Penguin?',
-      'answers': [
-        {'text': 'Yes', 'score': 0},
-        {'text': 'No', 'score': 1},
-      ],
-    },
-
-    {
-      'img': 'images/Birds/owl.png',
-      'questionText': 'Q9. Is this an Owl?',
-      'answers': [
-        {'text': 'Yes', 'score': 1},
-        {'text': 'No', 'score': 0},
-      ],
-    },
-
-    {
-      'img': 'images/Birds/parrot.png',
-      'questionText': 'Q10. Is this a Sparrow?',
-      'answers': [
-        {'text': 'Yes', 'score': 0},
-        {'text': 'No', 'score': 1},
-      ],
-    },
-  ];
-
-  var _questionIndex = 0;
-  var _totalScore = 0;
-
-  void _resetQuiz() {
-    setState(() {
-      _questionIndex = 0;
-      _totalScore = 0;
-    });
-  }
-
-  void _answerQuestion(int score) {
-    _totalScore += score;
-
-    setState(() {
-      _questionIndex = _questionIndex + 1;
-    });
-    print(_questionIndex);
-    if (_questionIndex < _questions.length) {
-      print('We have more questions!');
-    } else {
-      print('No more questions!');
-    }
+  void initState() {
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        /* constraints: BoxConstraints.expand(),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("BackgroundQuiz/Back1.jpg"),
-                        fit: BoxFit.cover)),*/
-        child: Scaffold(
+    return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
+        elevation: 0.0,
         centerTitle: true,
-        title: Text('Quiz of Birds'),
-        backgroundColor: Color(0x3F00E676),
+        title: Text(
+          " Quiz ",
+          style: TextStyle(fontFamily: 'Comic'),
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: _questionIndex < _questions.length
-            ? Quiz(
-                answerQuestion: _answerQuestion,
-                questionIndex: _questionIndex,
-                questions: _questions,
-              ) //Quiz
-            : Result(_totalScore, _resetQuiz),
-      ), //Padding
-      //Scaffold
-      // debugShowCheckedModeBanner: false,
-    ));
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+            image: AssetImage('images/coq.jpg'),
+            fit: BoxFit.fill,
+          )),
+          child: Container(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    new Text(
+                      "Score: $finalScore",
+                      style: new TextStyle(
+                        fontSize: 22.0,
+                      ),
+                    )
+                  ],
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: choices.keys.map((element) {
+                          return Expanded(
+                            child: Draggable<String>(
+                              data: element,
+                              child: Movable(
+                                  score[element] == true ? '✔️' : element),
+                              feedback: Movable(element),
+                              childWhenDragging: Movable(element),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: choices.keys.map((element) {
+                          return buildTarget(element);
+                        }).toList()
+                          ..shuffle(Random(index)),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )),
+     /* floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.refresh),
+        onPressed: () {
+          setState(() {
+            //finalScore.clear();
+            index++;
+            finalScore = 0;
+          });
+        },
+      ),*/
+    );
+  }
+
+  Widget buildTarget(element) {
+    return DragTarget<String>(
+      builder: (context, incoming, rejected) {
+        if (score[element] == true) {
+          return Container(
+            // color: Colors.,
+            child: Text('Congratulations !'),
+            alignment: Alignment.center,
+            height: 100,
+            width: 200,
+          );
+        } else {
+          return Container(
+            alignment: Alignment.center,
+            child: Text(
+              choices[element],
+              style: TextStyle(
+                fontFamily: 'comic',
+                fontSize: 30,
+                color: Colors.teal[300],
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            height: 50,
+            width: 200,
+          );
+        }
+      },
+      onWillAccept: (data) => data == element,
+      onAccept: (data) {
+        setState(() {
+          score[element] = true;
+          finalScore += 2;
+          player.play('Birds-sound/ggg.mp3');
+        });
+      },
+      onLeave: (data) {},
+    );
+  }
+}
+
+class Movable extends StatelessWidget {
+  String emoji;
+  Movable(this.emoji);
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(7),
+        height: 150,
+        child: Text(
+          emoji,
+          style: TextStyle(color: Colors.black, fontSize: 60),
+        ),
+      ),
+    );
   }
 }

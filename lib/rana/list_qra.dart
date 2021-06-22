@@ -12,8 +12,14 @@ class ListQra extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
         centerTitle: true,
-        title: Text("القران الكريم"),
+        title: Text("القرآن الكريم"),
         backgroundColor: Colors.teal[300],
       ),
       body: ListView(padding: EdgeInsets.all(20.0), children: <Widget>[

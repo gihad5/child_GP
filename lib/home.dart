@@ -131,7 +131,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "alphabet",
+                                        "Alphabet",
                                         style: TextStyle(
                                             fontSize: 16.0,
                                             fontFamily: 'Comic',
@@ -509,7 +509,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "Organs",
+                                        "Body Parts",
                                         style: TextStyle(
                                             fontSize: 16.0,
                                             fontFamily: 'Comic',
@@ -572,7 +572,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "seasons",
+                                        "Seasons",
                                         style: TextStyle(
                                             fontSize: 16.0,
                                             fontFamily: 'Comic',
@@ -887,7 +887,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "Fruits&vegetables",
+                                        "Fruits&Vegetables",
                                         style: TextStyle(
                                             fontSize: 12.0,
                                             fontFamily: 'Comic',
@@ -950,7 +950,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "shapes",
+                                        "Shapes",
                                         style: TextStyle(
                                             fontSize: 16.0,
                                             fontFamily: 'Comic',
@@ -1013,7 +1013,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     width: 130.0,
                                     child: Center(
                                       child: Text(
-                                        "القرأن الكريم",
+                                        "القرآن الكريم",
                                         style: TextStyle(
                                             fontSize: 16.0,
                                             fontFamily: 'Comic',

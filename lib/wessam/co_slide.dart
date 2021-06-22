@@ -45,7 +45,7 @@ class _CoSlideState extends State<CoSlide> {
           slivers: <Widget>[
             SliverAppBar(
               leading: IconButton(
-                icon: Image.asset('images/alp/arrow2.png'),
+                icon: Image.asset('images/arrow.png'),
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -104,7 +104,7 @@ class _CoSlideState extends State<CoSlide> {
                                 style: TextStyle(
                                     fontFamily: 'Comic',
                                     fontSize: 33.0,
-                                    color: Colors.orange,
+                                    color: Colors.red,
                                     fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -156,7 +156,7 @@ class _CoSlideState extends State<CoSlide> {
                                 style: TextStyle(
                                     fontFamily: 'Comic',
                                     fontSize: 33.0,
-                                    color: Colors.blue,
+                                    color: Colors.yellow[600],
                                     fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -208,7 +208,7 @@ class _CoSlideState extends State<CoSlide> {
                                 style: TextStyle(
                                     fontFamily: 'Comic',
                                     fontSize: 33.0,
-                                    color: Colors.blueAccent,
+                                    color: Colors.green,
                                     fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -260,7 +260,7 @@ class _CoSlideState extends State<CoSlide> {
                                 style: TextStyle(
                                     fontFamily: 'Comic',
                                     fontSize: 33.0,
-                                    color: Colors.blueGrey,
+                                    color: Colors.blue,
                                     fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -312,7 +312,7 @@ class _CoSlideState extends State<CoSlide> {
                                 style: TextStyle(
                                     fontFamily: 'Comic',
                                     fontSize: 33.0,
-                                    color: Colors.yellow,
+                                    color: Colors.orange,
                                     fontWeight: FontWeight.w600),
                               ),
                             ],

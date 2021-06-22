@@ -39,7 +39,7 @@ class _EngQuizeState extends State<EngQuize> {
         elevation: 0.0,
         centerTitle: true,
         title: Text(
-          " Quize ",
+          " Quiz ",
           style: TextStyle(fontFamily: 'Comic'),
         ),
       ),

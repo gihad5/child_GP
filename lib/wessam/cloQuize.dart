@@ -38,73 +38,55 @@ class CloQuize extends StatefulWidget {
 
 class _CloQuizeState extends State<CloQuize> {
   final _questions = [
-    //  Container(
-    // child: ListView(
-    //  children: <Widget>[
-    //         Container(
-    //             width: 320,
-    //   child: Column(
-    //     children : [
-    //       SizedBox(
-    //       height: 200,
-    //       child: Image.asset('Birds/sparrow.png'),
-    //       ),
-    //'questionText': 'Q1. Who created Flutter?'
-    //SizedBox(
-
-    //child: ('questionText': 'Q1. Who created Flutter?',) ,
-    //),
-    //  ]))])), List<Map<String, Object>>
-
+    
     {
       'img': 'images/clo/jaket.png',
-      'questionText': 'Q1. What is the name of this Clothes?',
+      'questionText': 'Q1. What is that name ?',
       'answers': [
-        //{'child': Image.asset('Bird/flammngo.png')},
-        {'text': 'skrit', 'score': 0},
-        {'text': 'boot', 'score': 0},
-        {'text': 'Jacket', 'score': 1},
-        {'text': 'dress', 'score': 0},
+        {'text': 'Skrit', 'score': 0},
+        {'text': 'Boot', 'score': 0},
+        {'text': 'Jacket', 'score': 2},
+        {'text': 'Dress', 'score': 0},
       ],
     },
     {
       'img': 'images/clo/skrit.png',
-      'questionText': 'Q2. What is the name of this Clothes?',
+      'questionText': 'Q2. What is that name ?',
       'answers': [
-        {'text': 'boot', 'score': 0},
-        {'text': 'cap', 'score': 0},
+        {'text': 'Boot', 'score': 0},
+        {'text': 'Cap', 'score': 0},
         {'text': 'Jacket', 'score': 0},
-        {'text': 'skrit', 'score': 1},
+        {'text': 'Skrit', 'score': 2},
       ],
     },
     {
       'img': 'images/clo/boot.png',
-      'questionText': ' Q3. What is the name of this Clothes?',
+      'questionText': ' Q3. What is that name ?',
       'answers': [
-        {'text': 'skrit', 'score': 0},
-        {'text': 'boot', 'score': 1},
-        {'text': 'cap', 'score': 0},
-        {'text': 'dress', 'score': 0},
+        {'text': 'Skrit', 'score': 0},
+        {'text': 'Boot', 'score': 2},
+        {'text': 'Cap', 'score': 0},
+        {'text': 'Dress', 'score': 0},
       ],
     },
     {
       'img': 'images/clo/dress.png',
-      'questionText': 'Q4. What is the name of this Clothes?',
+      'questionText': 'Q4. What is that name ?',
       'answers': [
-        {'text': 'skrit', 'score': 0},
-        {'text': 'cap', 'score': 0},
-        {'text': 'dress', 'score': 1},
-        {'text': 'jeans', 'score': 0},
+        {'text': 'Skrit', 'score': 0},
+        {'text': 'Cap', 'score': 0},
+        {'text': 'Dress', 'score': 2},
+        {'text': 'Jeans', 'score': 0},
       ],
     },
     {
       'img': 'images/clo/jeans.png',
-      'questionText': 'Q5. What is the name of this Clothes?',
+      'questionText': 'Q5. What is that name ?',
       'answers': [
-        {'text': 'jeans', 'score': 1},
-        {'text': 'cap', 'score': 0},
-        {'text': 'skrit', 'score': 0},
-        {'text': 'dress', 'score': 0},
+        {'text': 'Jeans', 'score': 2},
+        {'text': 'Cap', 'score': 0},
+        {'text': 'Skrit', 'score': 0},
+        {'text': 'Dress', 'score': 0},
       ],
     },
   ];
@@ -136,16 +118,18 @@ class _CloQuizeState extends State<CloQuize> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        /* constraints: BoxConstraints.expand(),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("BackgroundQuiz/Back1.jpg"),
-                        fit: BoxFit.cover)),*/
+        
         child: Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
         centerTitle: true,
         title: Text('Quiz of Clothes'),
-        backgroundColor: Color(0x3F00E676),
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),

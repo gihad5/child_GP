@@ -44,7 +44,7 @@ class _CloSlideState extends State<CloSlide> {
           slivers: <Widget>[
             SliverAppBar(
               leading: IconButton(
-                icon: Image.asset('images/alp/arrow2.png'),
+                icon: Image.asset('images/arrow.png'),
                 onPressed: () {
                   Navigator.pop(context);
                 },

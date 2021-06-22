@@ -12,6 +12,12 @@ class ListNumbers extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
         centerTitle: true,
         title: Text("Numbers"),
         backgroundColor: Colors.teal[300],

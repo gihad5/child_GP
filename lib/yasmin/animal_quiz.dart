@@ -52,7 +52,7 @@ class AnimalsQuizState extends State<AnimalsQuiz> {
             elevation: 0.0,
             centerTitle: true,
             title: Text(
-              "Quize",
+              "Quiz",
               style: TextStyle(fontFamily: 'Comic'),
             ),
           ),
@@ -177,7 +177,7 @@ class Summary extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Text(
-                "Final Score: $score",
+                "Score: $score",
                 style: new TextStyle(fontSize: 35.0),
               ),
               new Padding(padding: EdgeInsets.all(10.0)),

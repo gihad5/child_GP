@@ -52,11 +52,16 @@ class CoQuizeState extends State<CoQuize> {
             elevation: 0.0,
             centerTitle: true,
             title: Text(
-              "Quize",
+              "Quiz",
               style: TextStyle(fontFamily: 'Comic'),
             ),
           ),
           body: new Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('images/coq.jpg'),
+            fit: BoxFit.fill,
+          )),
             margin: const EdgeInsets.all(10.0),
             alignment: Alignment.topCenter,
             child: new Column(
@@ -79,7 +84,7 @@ class CoQuizeState extends State<CoQuize> {
                 ),
                 new Padding(padding: EdgeInsets.all(10.0)),
                 AvatarGlow(
-                  animate: _isListening,
+                  animate: _isListening,//true,
                   glowColor: Theme.of(context).primaryColor,
                   endRadius: 75.0,
                   duration: const Duration(milliseconds: 2000),
@@ -87,6 +92,7 @@ class CoQuizeState extends State<CoQuize> {
                   repeat: true,
                   child: FloatingActionButton(
                     onPressed: _listen,
+                    backgroundColor: Colors.teal[400],
                     child: Icon(_isListening ? Icons.mic : Icons.mic_none),
                   ),
                 ),

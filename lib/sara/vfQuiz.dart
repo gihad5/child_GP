@@ -44,11 +44,11 @@ class _VfQuizState extends State<VfQuiz> {
         ),
       ),
       body: Container(
-          /* decoration: BoxDecoration(
-              /*image: DecorationImage(
+           decoration: BoxDecoration(
+            image: DecorationImage(
             image: AssetImage('images/coq.jpg'),
             fit: BoxFit.fill,
-          )*/),*/
+          )),
           child: Container(
         child: Column(
           children: [
@@ -56,7 +56,7 @@ class _VfQuizState extends State<VfQuiz> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 new Text(
-                  "Your Score: $finalScore",
+                  "Score: $finalScore",
                   style: new TextStyle(
                     fontSize: 22.0,
                   ),

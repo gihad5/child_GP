@@ -46,9 +46,10 @@ class LogInScreen extends StatelessWidget {
               height: height * .02,
             ),
             TextFormField(
+               obscureText: true,
               decoration: const InputDecoration(
                 icon: Icon(Icons.lock),
-                hintText: 'secrt password',
+                hintText: 'secret password',
                 labelText: 'Password',
               ),
               onSaved: (value) {

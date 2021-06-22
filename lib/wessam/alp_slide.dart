@@ -68,7 +68,7 @@ class _AlpSliderState extends State<AlpSlider> {
           },
           icon: Image.asset('images/arrow.png'),
         ),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.teal[300],
         elevation: 0.0,
         centerTitle: true,
         title: Text(
@@ -489,7 +489,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/fox.png'),
+                            child: Image.asset('images/alp/Fox0.png'),
                           ),
                           Text(
                             "ث",
@@ -523,7 +523,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/giraffe.png'),
+                            child: Image.asset('images/alp/Camel.png'),
                           ),
                           Text(
                             "ج",
@@ -558,7 +558,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/zebra.png'),
+                            child: Image.asset('images/alp/Horse.png'),
                           ),
                           Text(
                             "ح",
@@ -628,7 +628,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/ديك.png'),
+                            child: Image.asset('images/Birds/cock.png'),
                           ),
                           Text(
                             "د",
@@ -768,7 +768,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/سنجاب.png'),
+                            child: Image.asset('images/alp/Sengap.png'),
                           ),
                           Text(
                             "س",
@@ -873,7 +873,7 @@ class _AlpSliderState extends State<AlpSlider> {
                           Container(
                             height: 200.0,
                             width: 200.0,
-                            child: Image.asset('images/alp/ضفدع.png'),
+                            child: Image.asset('images/alp/Frog.jpg'),
                           ),
                           Text(
                             "ض",

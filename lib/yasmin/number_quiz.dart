@@ -44,11 +44,11 @@ class _NumMatchState extends State<NumMatch> {
         ),
       ),
       body: Container(
-          /* decoration: BoxDecoration(
-              /*image: DecorationImage(
+          decoration: BoxDecoration(
+              image: DecorationImage(
             image: AssetImage('images/coq.jpg'),
             fit: BoxFit.fill,
-          )*/),*/
+          )),
           child: Container(
         child: Column(
           children: [
@@ -166,7 +166,7 @@ class Movable extends StatelessWidget {
         child: Text(
           emoji,
           style: TextStyle(
-              color: Colors.white, backgroundColor: Colors.teal, fontSize: 60),
+              color: Colors.white, backgroundColor: Colors.teal[200], fontSize: 60),
         ),
       ),
     );

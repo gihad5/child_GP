@@ -117,10 +117,17 @@ class _SeasonsQuizState extends State<SeasonsQuiz> {
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
 
-      appBar: AppBar(
+       appBar: AppBar(
+           leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
         centerTitle: true,
-        title: Text('Quiz of Days'),
-        backgroundColor: Color(0x3F00E676),
+        title: Text('Quiz'),
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),

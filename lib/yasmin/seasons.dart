@@ -34,25 +34,34 @@ class _SeasonSliderState extends State<SeasonSlider> {
         primarySwatch: Colors.indigo,
       ),
       home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: Text('Seasons')),
+        appBar: AppBar(
+           leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+        backgroundColor: Colors.teal[300],
+        centerTitle: true, 
+        title: Text('Seasons')),
         body: Container(
           height: 800,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               Container(
-                  width: 411,
+                  width: 360,
                   // color: Colors.cyan[100],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      // SizedBox(height: 1),
+                      SizedBox(height: 20),
                       Image.asset('images/seasons/winter.jpg'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -67,7 +76,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("swinter.mp3");
@@ -77,7 +86,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
@@ -85,20 +94,20 @@ class _SeasonSliderState extends State<SeasonSlider> {
                     ],
                   )),
               Container(
-                  width: 411,
+                  width: 360,
                   //color: Colors.pinkAccent[100],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 60),
+                      SizedBox(height: 20),
                       Image.asset('images/seasons/spring.png'),
                       SizedBox(
-                        height: 50,
+                        height: 70,
                       ),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
 
                       SizedBox(height: 50),
@@ -114,7 +123,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("sspring.mp3");
@@ -124,7 +133,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
@@ -132,18 +141,18 @@ class _SeasonSliderState extends State<SeasonSlider> {
                     ],
                   )),
               Container(
-                  width: 411,
+                  width: 360,
                   // color: Colors.yellow[500],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      //SizedBox(height: 90),
+                      SizedBox(height: 20),
                       Image.asset('images/seasons/summer.jpg'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
                       Container(
@@ -158,7 +167,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("ssummer.mp3");
@@ -168,7 +177,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),
@@ -176,18 +185,18 @@ class _SeasonSliderState extends State<SeasonSlider> {
                     ],
                   )),
               Container(
-                  width: 411,
+                  width: 360,
                   // color: Colors.brown[200],
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      // SizedBox(height: 50),
+                      SizedBox(height: 20),
                       Image.asset('images/seasons/fall.jpg'),
-                      SizedBox(height: 50),
+                      SizedBox(height: 70),
                       Divider(
-                        color: Colors.indigo,
-                        thickness: 10,
+                        color: Colors.teal[300],
+                        thickness: 7,
                       ),
                       SizedBox(height: 50),
 
@@ -203,7 +212,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                               ),
                             )),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 40),
                       RawMaterialButton(
                         onPressed: () {
                           audioCache.play("sautumn.mp3");
@@ -213,7 +222,7 @@ class _SeasonSliderState extends State<SeasonSlider> {
                         child: Icon(
                           Icons.volume_up,
                           color: Colors.red,
-                          size: 35.0,
+                          size: 30.0,
                         ),
                         padding: EdgeInsets.all(15.0),
                         shape: CircleBorder(),

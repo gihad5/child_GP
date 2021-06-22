@@ -29,6 +29,18 @@ class _BodyPState extends State<BodyP> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('images/arrow.png'),
+        ),
+          centerTitle: true,
+          title: Text("Body Parts"),
+          backgroundColor: Colors.teal[300],
+
+        ),
         body: Container(
           margin: EdgeInsets.fromLTRB(20, 115, 20, 115),
           height: 750,
@@ -38,10 +50,7 @@ class _BodyPState extends State<BodyP> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              Container(
-                width: 70.0,
-                color: Colors.white10,
-              ),
+              
               Container(
                   width: 320,
                   child: Column(children: [
@@ -69,7 +78,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -124,7 +133,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -179,7 +188,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -235,7 +244,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -291,7 +300,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -347,7 +356,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -403,7 +412,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -459,7 +468,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -515,7 +524,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -571,7 +580,7 @@ class _BodyPState extends State<BodyP> {
                       height: 18,
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 45,
                       child: //Image.asset('Icons/Speaker.png'),
                           ClipOval(
                         child: Material(
@@ -603,9 +612,6 @@ class _BodyPState extends State<BodyP> {
           ),
         ),
         //backgroundColor: Color.fromRGBO(255, 204, 204, 1.0) ,
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Body Parts"),
-        ));
+      );
   }
 }

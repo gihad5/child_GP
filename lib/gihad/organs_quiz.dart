@@ -44,11 +44,11 @@ class _BodyQuizState extends State<BodyQuiz> {
         ),
       ),
       body: Container(
-          /* decoration: BoxDecoration(
-              /*image: DecorationImage(
+           decoration: BoxDecoration(
+              image: DecorationImage(
             image: AssetImage('images/coq.jpg'),
             fit: BoxFit.fill,
-          )*/),*/
+          )),
           child: Container(
         child: Column(
           children: [
@@ -56,7 +56,7 @@ class _BodyQuizState extends State<BodyQuiz> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 new Text(
-                  "Your Score: $finalScore",
+                  "Score: $finalScore",
                   style: new TextStyle(
                     fontSize: 22.0,
                   ),
@@ -128,7 +128,7 @@ class _BodyQuizState extends State<BodyQuiz> {
               style: TextStyle(
                 fontFamily: 'comic',
                 fontSize: 30,
-                color: Colors.teal[300],
+                color: Colors.teal[200],
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -45,7 +45,7 @@ class _VegSliderState extends State<VegSlider> {
               },
               icon: Image.asset('images/arrow.png'),
             ),
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.teal[300],
             elevation: 0.0,
             centerTitle: true,
             title: Text(

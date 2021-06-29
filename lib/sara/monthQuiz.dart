@@ -140,7 +140,7 @@ class _MonthQuizState extends State<MonthQuiz> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               ) //Quiz
-            : Result(_totalScore, _resetQuiz),
+            : Result(_totalScore, _resetQuiz, "month"),
       ), //Padding
       //Scaffold
       // debugShowCheckedModeBanner: false,

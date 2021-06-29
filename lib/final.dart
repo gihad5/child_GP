@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kido/finalexam2.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FinalExam extends StatefulWidget {
   @override
@@ -7,8 +9,52 @@ class FinalExam extends StatefulWidget {
 }
 
 class _FinalExamState extends State<FinalExam> {
+  String myName = '';
+  String fatherName = '';
+  String motherName = '';
+  String myAge = '';
+  int totalScore = 0;
+
+  void getStudentInfo() {
+    final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+    final CollectionReference _mainCollection = _firestore.collection('child');
+    String email = FirebaseAuth.instance.currentUser.email;
+
+    DocumentReference documentReferencer = _mainCollection.doc(email);
+    documentReferencer
+      ..get().then((value) {
+        myAge = value.data()["age"].toString();
+        motherName = value.data()["mother"].toString();
+        myName = value.data()["name"].toString();
+        fatherName = value.data()["father"].toString();
+        print('fffff' + fatherName);
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
+    totalScore = 0;
+    final nameController = TextEditingController();
+    final ageController = TextEditingController();
+    final fatherController = TextEditingController();
+    final motherController = TextEditingController();
+
+    void calculateTotalScore() {
+      if (nameController.text.toString() == myName) {
+        totalScore += 2;
+      }
+      if (ageController.text.toString() == myAge) {
+        totalScore += 2;
+      }
+      if (fatherController.text.toString() == fatherName) {
+        totalScore += 2;
+      }
+      if (motherController.text.toString() == motherName) {
+        totalScore += 2;
+      }
+    }
+
+    getStudentInfo();
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -30,6 +76,7 @@ class _FinalExamState extends State<FinalExam> {
                 height: 16,
               ),
               TextField(
+                controller: nameController,
                 decoration: InputDecoration(
                   labelText: "Q1. What is your name?",
                   hintText: "",
@@ -48,6 +95,7 @@ class _FinalExamState extends State<FinalExam> {
                 height: 16,
               ),
               TextField(
+                controller: ageController,
                 decoration: InputDecoration(
                   labelText: "Q2. How old are you?",
                   hintText: "",
@@ -67,6 +115,7 @@ class _FinalExamState extends State<FinalExam> {
                 height: 16,
               ),
               TextField(
+                controller: fatherController,
                 decoration: InputDecoration(
                   labelText: "Q3. what is father's name?",
                   hintText: "",
@@ -86,6 +135,7 @@ class _FinalExamState extends State<FinalExam> {
                 height: 16,
               ),
               TextField(
+                controller: motherController,
                 decoration: InputDecoration(
                   labelText: "Q4. what is mother's name",
                   hintText: "",
@@ -110,8 +160,11 @@ class _FinalExamState extends State<FinalExam> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Final()));
+                        calculateTotalScore();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Final(totalScore)));
                       },
                       color: Colors.teal[300],
                       child: Text(

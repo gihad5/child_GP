@@ -125,11 +125,11 @@ class _QuranQuizState extends State<QuranQuiz> {
         child: Scaffold(
           appBar: AppBar(
             leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Image.asset('images/arrow.png'),
-        ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Image.asset('images/arrow.png'),
+            ),
             centerTitle: true,
             title: Text('Quiz'),
             backgroundColor: Colors.teal[300],
@@ -142,7 +142,7 @@ class _QuranQuizState extends State<QuranQuiz> {
                     questionIndex: _questionIndex,
                     questions: _questions,
                   ) //Quiz
-                : Result(_totalScore, _resetQuiz),
+                : Result(_totalScore, _resetQuiz, "quran"),
           ), //Padding
           //Scaffold
           // debugShowCheckedModeBanner: false,

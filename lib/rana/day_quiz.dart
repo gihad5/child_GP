@@ -142,7 +142,7 @@ class _DaysQuizState extends State<DaysQuiz> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               ) //Quiz
-            : Result(_totalScore, _resetQuiz),
+            : Result(_totalScore, _resetQuiz, "day"),
       ), //Padding
       //Scaffold
       // debugShowCheckedModeBanner: false,

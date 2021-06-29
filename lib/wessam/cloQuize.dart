@@ -38,7 +38,6 @@ class CloQuize extends StatefulWidget {
 
 class _CloQuizeState extends State<CloQuize> {
   final _questions = [
-    
     {
       'img': 'images/clo/jaket.png',
       'questionText': 'Q1. What is that name ?',
@@ -118,7 +117,6 @@ class _CloQuizeState extends State<CloQuize> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        
         child: Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -139,7 +137,7 @@ class _CloQuizeState extends State<CloQuize> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               ) //Quiz
-            : Result(_totalScore, _resetQuiz),
+            : Result(_totalScore, _resetQuiz, "Clothes"),
       ), //Padding
       //Scaffold
       // debugShowCheckedModeBanner: false,

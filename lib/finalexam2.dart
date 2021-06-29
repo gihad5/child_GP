@@ -32,6 +32,9 @@ class Quiz extends StatelessWidget {
 }
 
 class Final extends StatefulWidget {
+  int totalScoree;
+  Final(this.totalScoree);
+
   @override
   _FinalState createState() => _FinalState();
 }
@@ -248,12 +251,18 @@ class _FinalState extends State<Final> {
   ];
 
   var _questionIndex = 0;
-  var _totalScore = 0;
+  int _totalScore = 0;
+
+  @override
+  void initState() {
+    _totalScore = widget.totalScoree;
+    print('totallll ' + _totalScore.toString());
+  }
 
   void _resetQuiz() {
     setState(() {
       _questionIndex = 0;
-      _totalScore = 0;
+      _totalScore = widget.totalScoree;
     });
   }
 
@@ -288,7 +297,7 @@ class _FinalState extends State<Final> {
           icon: Image.asset('images/arrow.png'),
         ),
         centerTitle: true,
-        title: Text('Quiz of Birds'),
+        title: Text('Final Exam'),
         backgroundColor: Colors.teal[300],
       ),
       body: Padding(
@@ -299,7 +308,7 @@ class _FinalState extends State<Final> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               ) //Quiz
-            : Result(_totalScore, _resetQuiz),
+            : Result(_totalScore, _resetQuiz, "final exam"),
       ), //Padding
       //Scaffold
       // debugShowCheckedModeBanner: false,

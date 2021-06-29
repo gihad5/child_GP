@@ -117,8 +117,8 @@ class _SeasonsQuizState extends State<SeasonsQuiz> {
     return Scaffold(
       backgroundColor: Color(0xFFFFFFFF),
 
-       appBar: AppBar(
-           leading: IconButton(
+      appBar: AppBar(
+        leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
@@ -127,7 +127,6 @@ class _SeasonsQuizState extends State<SeasonsQuiz> {
         backgroundColor: Colors.teal[300],
         centerTitle: true,
         title: Text('Quiz'),
-        
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
@@ -137,7 +136,7 @@ class _SeasonsQuizState extends State<SeasonsQuiz> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               ) //Quiz
-            : Result(_totalScore, _resetQuiz),
+            : Result(_totalScore, _resetQuiz, "season"),
       ), //Padding
       //Scaffold
       // debugShowCheckedModeBanner: false,

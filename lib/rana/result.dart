@@ -1,14 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kido/home.dart';
 import 'package:kido/rana/bird_quiz.dart';
 import 'package:kido/rana/day_quiz.dart';
 import 'package:kido/rana/qra_quiz.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
   final Function resetHandler;
+  final String subjectName;
 
-  Result(this.resultScore, this.resetHandler);
+  Result(this.resultScore, this.resetHandler, this.subjectName);
 
 //Remark Logic
   String get resultPhrase {
@@ -30,17 +33,32 @@ class Result extends StatelessWidget {
     return resultText;
   }
 
+  Future<void> setSubjectGrade() async {
+    final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+    final CollectionReference _mainCollection = _firestore.collection('child');
+    String email = FirebaseAuth.instance.currentUser.email;
+
+    DocumentReference documentReferencer =
+        _mainCollection.doc(email).collection("grades").doc();
+
+    Map<String, dynamic> data = <String, dynamic>{
+      "subject": subjectName,
+      "grade": resultScore,
+    };
+
+    await documentReferencer
+        .set(data)
+        .whenComplete(() => print("Subject grade added to the database"))
+        .catchError((e) => print(e));
+  }
+
   @override
   Widget build(BuildContext context) {
+    setSubjectGrade();
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          /*	Text(
-			resultPhrase,
-			style: TextStyle(color:Colors.grey[800], fontSize: 26, fontWeight: FontWeight.bold),
-			textAlign: TextAlign.center,
-		), //Text*/
           Text(
             'Your Score : ' '$resultScore ',
             style: TextStyle(

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/rana/result.dart';
 
 var finalScore = 0;
 
@@ -20,6 +21,8 @@ class _AlpQuizeState extends State<AlpQuize> {
     '🐎': "ح",
   };
   int index = 0;
+
+  Function get _resetQuiz => null;
   @override
   void initState() {
     super.initState();
@@ -143,6 +146,13 @@ class _AlpQuizeState extends State<AlpQuize> {
           score[element] = true;
           finalScore += 2;
           player.play('true.mp3');
+          if (finalScore == 10) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Result(finalScore, _resetQuiz, "alphabet")));
+          }
         });
       },
       onLeave: (data) {},

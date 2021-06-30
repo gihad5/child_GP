@@ -16,15 +16,15 @@ class Result extends StatelessWidget {
 //Remark Logic
   String get resultPhrase {
     String resultText;
-    if (resultScore >= 10) {
+    if (resultScore >= 50) {
       resultText = 'You are awesome!';
       print(resultScore);
-    } else if (resultScore >= 8) {
+    } else if (resultScore >= 44) {
       resultText = 'Pretty likeable!';
       print(resultScore);
-    } else if (resultScore >= 6) {
+    } else if (resultScore >= 30) {
       resultText = 'You need to work more!';
-    } else if (resultScore >= 4) {
+    } else if (resultScore >= 25) {
       resultText = 'You need to work hard!';
     } else {
       resultText = 'This is a poor score!';

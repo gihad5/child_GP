@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:kido/rana/result.dart';
 
 //var finalScore = 0;
 //var questionNumber = 0;
@@ -27,6 +28,8 @@ class AnimalsQuizState extends State<AnimalsQuiz> {
     "images/animals/lion.png",
     "images/animals/elephant.png"
   ];
+
+  Function get _resetQuiz => null;
 
   @override
   void initState() {
@@ -152,10 +155,9 @@ class AnimalsQuizState extends State<AnimalsQuiz> {
       if (questionNumber == colors.length - 1) {
         Navigator.push(
             context,
-            new MaterialPageRoute(
-                builder: (context) => new Summary(
-                      score: finalScore,
-                    )));
+            MaterialPageRoute(
+                builder: (context) =>
+                    Result(finalScore, _resetQuiz, "animal")));
       } else {
         questionNumber++;
       }
@@ -163,7 +165,7 @@ class AnimalsQuizState extends State<AnimalsQuiz> {
   }
 }
 
-class Summary extends StatelessWidget {
+/*class Summary extends StatelessWidget {
   final int score;
   Summary({Key key, @required this.score}) : super(key: key);
 
@@ -199,7 +201,7 @@ class Summary extends StatelessWidget {
       ),
     );
   }
-}
+}*/
 /*import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/rana/result.dart';
 
 var finalScore = 0;
 
@@ -20,6 +21,8 @@ class _BirdsQuizState extends State<BirdsQuiz> {
     '🦜': "Parrot"
   };
   int index = 0;
+
+  Function get _resetQuiz => null;
   @override
   void initState() {
     super.initState();
@@ -44,8 +47,8 @@ class _BirdsQuizState extends State<BirdsQuiz> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
+          decoration: BoxDecoration(
+              image: DecorationImage(
             image: AssetImage('images/coq.jpg'),
             fit: BoxFit.fill,
           )),
@@ -96,7 +99,7 @@ class _BirdsQuizState extends State<BirdsQuiz> {
               ],
             ),
           )),
-     /* floatingActionButton: FloatingActionButton(
+      /* floatingActionButton: FloatingActionButton(
         child: Icon(Icons.refresh),
         onPressed: () {
           setState(() {
@@ -142,17 +145,28 @@ class _BirdsQuizState extends State<BirdsQuiz> {
         setState(() {
           score[element] = true;
           finalScore += 2;
-          player.play('Birds-sound/ggg.mp3');
+          player.play('true.mp3');
+          if (finalScore == 10) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Result(finalScore, _resetQuiz, "Birds")));
+          }
         });
       },
       onLeave: (data) {},
     );
+    // ignore: dead_code
   }
 }
 
 class Movable extends StatelessWidget {
   String emoji;
   Movable(this.emoji);
+
+  Function get _resetQuiz => null;
+
   @override
   Widget build(BuildContext context) {
     return Material(

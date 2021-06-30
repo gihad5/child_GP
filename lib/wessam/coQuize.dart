@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:kido/rana/result.dart';
 
 //var finalScore = 0;
 //var questionNumber = 0;
@@ -27,6 +28,8 @@ class CoQuizeState extends State<CoQuize> {
     "images/co/green.png",
     "images/co/yellow.png"
   ];
+
+  Function get _resetQuiz => null;
 
   @override
   void initState() {
@@ -58,10 +61,10 @@ class CoQuizeState extends State<CoQuize> {
           ),
           body: new Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-            image: AssetImage('images/coq.jpg'),
-            fit: BoxFit.fill,
-          )),
+                image: DecorationImage(
+              image: AssetImage('images/coq.jpg'),
+              fit: BoxFit.fill,
+            )),
             margin: const EdgeInsets.all(10.0),
             alignment: Alignment.topCenter,
             child: new Column(
@@ -84,7 +87,7 @@ class CoQuizeState extends State<CoQuize> {
                 ),
                 new Padding(padding: EdgeInsets.all(10.0)),
                 AvatarGlow(
-                  animate: _isListening,//true,
+                  animate: _isListening, //true,
                   glowColor: Theme.of(context).primaryColor,
                   endRadius: 75.0,
                   duration: const Duration(milliseconds: 2000),
@@ -158,10 +161,8 @@ class CoQuizeState extends State<CoQuize> {
       if (questionNumber == colors.length - 1) {
         Navigator.push(
             context,
-            new MaterialPageRoute(
-                builder: (context) => new Summary(
-                      score: finalScore,
-                    )));
+            MaterialPageRoute(
+                builder: (context) => Result(finalScore, _resetQuiz, "color")));
       } else {
         questionNumber++;
       }

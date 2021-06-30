@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kido/rana/answer.dart';
-import 'package:kido/rana/result.dart';
+import 'package:kido/resultt.dart';
 import 'package:kido/rana/question.dart';
 
 class Quiz extends StatelessWidget {

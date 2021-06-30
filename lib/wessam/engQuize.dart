@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/rana/result.dart';
 
 var finalScore = 0;
 
@@ -20,6 +21,8 @@ class _EngQuizeState extends State<EngQuize> {
     '☂️': "U",
   };
   int index = 0;
+
+  Function get _resetQuiz => null;
   @override
   void initState() {
     super.initState();
@@ -143,6 +146,13 @@ class _EngQuizeState extends State<EngQuize> {
           score[element] = true;
           finalScore += 2;
           player.play('true.mp3');
+          if (finalScore == 10) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Result(finalScore, _resetQuiz, "english")));
+          }
         });
       },
       onLeave: (data) {},

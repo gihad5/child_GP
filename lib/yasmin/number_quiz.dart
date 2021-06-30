@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/rana/result.dart';
 
 var finalScore = 0;
 
@@ -20,6 +21,8 @@ class _NumMatchState extends State<NumMatch> {
     '8️': "Eight",
   };
   int index = 0;
+
+  Function get _resetQuiz => null;
   @override
   void initState() {
     super.initState();
@@ -50,54 +53,54 @@ class _NumMatchState extends State<NumMatch> {
             fit: BoxFit.fill,
           )),
           child: Container(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                new Text(
-                  "Your Score: $finalScore",
-                  style: new TextStyle(
-                    fontSize: 22.0,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    new Text(
+                      "Your Score: $finalScore",
+                      style: new TextStyle(
+                        fontSize: 22.0,
+                      ),
+                    )
+                  ],
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: choices.keys.map((element) {
+                          return Expanded(
+                            child: Draggable<String>(
+                              data: element,
+                              child: Movable(
+                                  score[element] == true ? '✔️' : element),
+                              feedback: Movable(element),
+                              childWhenDragging: Movable(element),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: choices.keys.map((element) {
+                          return buildTarget(
+                            element,
+                          );
+                        }).toList()
+                          ..shuffle(Random(index)),
+                      ),
+                    ],
                   ),
-                )
+                ),
               ],
             ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: choices.keys.map((element) {
-                      return Expanded(
-                        child: Draggable<String>(
-                          data: element,
-                          child:
-                              Movable(score[element] == true ? '✔️' : element),
-                          feedback: Movable(element),
-                          childWhenDragging: Movable(element),
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: choices.keys.map((element) {
-                      return buildTarget(
-                        element,
-                      );
-                    }).toList()
-                      ..shuffle(Random(index)),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      )),
+          )),
       /* floatingActionButton: FloatingActionButton(
         child: Icon(Icons.refresh),
         onPressed: () {
@@ -145,6 +148,13 @@ class _NumMatchState extends State<NumMatch> {
           score[element] = true;
           finalScore += 2;
           player.play('ggg.mp3');
+          if (finalScore == 10) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Result(finalScore, _resetQuiz, "number")));
+          }
         });
       },
       onLeave: (data) {},
@@ -166,7 +176,9 @@ class Movable extends StatelessWidget {
         child: Text(
           emoji,
           style: TextStyle(
-              color: Colors.white, backgroundColor: Colors.teal[200], fontSize: 60),
+              color: Colors.white,
+              backgroundColor: Colors.teal[200],
+              fontSize: 60),
         ),
       ),
     );

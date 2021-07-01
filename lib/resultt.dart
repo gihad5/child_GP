@@ -39,7 +39,7 @@ class Result extends StatelessWidget {
     String email = FirebaseAuth.instance.currentUser.email;
 
     DocumentReference documentReferencer =
-        _mainCollection.doc(email).collection("grades").doc();
+        _mainCollection.doc(email).collection("grades").doc(subjectName);
 
     Map<String, dynamic> data = <String, dynamic>{
       "subject": subjectName,

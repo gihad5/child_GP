@@ -40,16 +40,19 @@ class _FinalExamState extends State<FinalExam> {
     final motherController = TextEditingController();
 
     void calculateTotalScore() {
-      if (nameController.text.toString() == myName) {
+      if (nameController.text.toString().toLowerCase() ==
+          myName.toLowerCase()) {
         totalScore += 2;
       }
-      if (ageController.text.toString() == myAge) {
+      if (ageController.text.toString().toLowerCase() == myAge.toLowerCase()) {
         totalScore += 2;
       }
-      if (fatherController.text.toString() == fatherName) {
+      if (fatherController.text.toString().toLowerCase() ==
+          fatherName.toLowerCase()) {
         totalScore += 2;
       }
-      if (motherController.text.toString() == motherName) {
+      if (motherController.text.toString().toLowerCase() ==
+          motherName.toLowerCase()) {
         totalScore += 2;
       }
     }

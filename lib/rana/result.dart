@@ -33,13 +33,14 @@ class Result extends StatelessWidget {
     return resultText;
   }
 
+  // Save subject name with its grade for this user in firebase database
   Future<void> setSubjectGrade() async {
     final FirebaseFirestore _firestore = FirebaseFirestore.instance;
     final CollectionReference _mainCollection = _firestore.collection('child');
     String email = FirebaseAuth.instance.currentUser.email;
 
     DocumentReference documentReferencer =
-        _mainCollection.doc(email).collection("grades").doc();
+        _mainCollection.doc(email).collection("grades").doc(subjectName);
 
     Map<String, dynamic> data = <String, dynamic>{
       "subject": subjectName,
@@ -55,7 +56,8 @@ class Result extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     setSubjectGrade();
-    return Center(
+    return Scaffold(
+        body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -109,6 +111,6 @@ class Result extends StatelessWidget {
           ),
         ],
       ), //Column
-    ); //Center
+    )); //Center
   }
 }

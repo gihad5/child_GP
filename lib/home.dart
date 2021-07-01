@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/Screens/login.dart';
 import 'package:kido/final.dart';
 import 'package:kido/gihad/list_organs.dart';
 import 'package:kido/gihad/list_vechiles.dart';
@@ -9,6 +11,7 @@ import 'package:kido/rana/list_qra.dart';
 import 'package:kido/sara/list_monthes.dart';
 import 'package:kido/sara/list_shapes.dart';
 import 'package:kido/sara/list_vf.dart';
+import 'package:kido/service/auth.dart';
 import 'package:kido/wessam/list_alp.dart';
 import 'package:kido/wessam/list_clo.dart';
 import 'package:kido/wessam/list_co.dart';
@@ -63,11 +66,17 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 blurRadius: 10.0,
                               ),
                             ]),
-                        child: Icon(
-                          Icons.lock_open,
-                          size: 30.0,
-                          color: Colors.teal[300],
-                        ),
+                        child: IconButton(
+                            icon: const Icon(Icons.lock_open),
+                            tooltip: 'logout',
+                            color: Colors.teal[300],
+                            onPressed: () async {
+                              await FirebaseAuth.instance.signOut();
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LogInScreen()));
+                            }),
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -88,11 +97,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 blurRadius: 10.0,
                               ),
                             ]),
-                        child: Icon(
-                          Icons.account_box_rounded,
-                          size: 35.0,
-                          color: Colors.tealAccent[700],
-                        ),
+                        child: IconButton(
+                            icon: const Icon(Icons.account_box_rounded),
+                            tooltip: 'profile',
+                            color: Colors.teal[300],
+                            onPressed: () async {}),
                       ),
                     ],
                   ),

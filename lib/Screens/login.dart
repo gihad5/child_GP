@@ -46,7 +46,7 @@ class LogInScreen extends StatelessWidget {
               height: height * .02,
             ),
             TextFormField(
-               obscureText: true,
+              obscureText: true,
               decoration: const InputDecoration(
                 icon: Icon(Icons.lock),
                 hintText: 'secret password',
@@ -73,7 +73,7 @@ class LogInScreen extends StatelessWidget {
                           try {
                             final authresult =
                                 await _auth.signIn(email, password);
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Home()));

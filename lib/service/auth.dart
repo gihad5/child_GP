@@ -13,4 +13,7 @@ class Auth {
         email: email, password: password);
     return authResult;
   }
+  Future forgetPassword(String email) async {
+    await _auth.sendPasswordResetEmail(email: email);
+  }
 }

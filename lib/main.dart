@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 
 import 'Screens/Srart.dart';
+import 'Screens/forget.dart';
 import 'Screens/login.dart';
 
 void main() async {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Start.id: (context) => Start(),
         LogInScreen.id:(context)=>LogInScreen(),
+        ForgetPassword.id:(context)=>ForgetPassword()
         
       },
     );

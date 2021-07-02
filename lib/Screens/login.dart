@@ -1,6 +1,7 @@
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kido/Screens/forget.dart';
 import 'package:kido/home.dart';
 import 'package:kido/service/auth.dart';
 
@@ -96,6 +97,18 @@ class LogInScreen extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: height * .05),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              GestureDetector(
+                child: Text(
+                  'Forget password!',
+                  style: TextStyle(color: Colors.red),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, ForgetPassword.id);
+                },
+              )
+            ]),
           ]),
         ));
   }

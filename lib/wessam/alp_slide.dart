@@ -88,233 +88,236 @@ class _AlpSliderState extends State<AlpSlider> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CarouselSlider(
-                height: 400.0,
-                initialPage: 0,
-                enlargeCenterPage: true,
-                autoPlay: true,
-                autoPlayAnimationDuration: Duration(milliseconds: 2500),
-                autoPlayInterval: Duration(milliseconds: 4500),
-                scrollDirection: Axis.horizontal,
-                onPageChanged: (index) {
-                  if (word[index] == 'الحروف العربية') {}
-                  if (word[index] == 'أ') {
-                    if (audioCache.play('aa.mp3') ==
-                        audioCache.play('aa.mp3')) {
-                      audioCache.play('aa.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ب') {
-                    if (audioCache.play('bb.mp3') ==
-                        audioCache.play('bb.mp3')) {
-                      audioCache.play('bb.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ت') {
-                    if (audioCache.play('tt.mp3') ==
-                        audioCache.play('tt.mp3')) {
-                      audioCache.play('tt.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ث') {
-                    if (audioCache.play('ss.mp3') ==
-                        audioCache.play('ss.mp3')) {
-                      audioCache.play('ss.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ج') {
-                    if (audioCache.play('gg.mp3') ==
-                        audioCache.play('gg.mp3')) {
-                      audioCache.play('gg.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ح') {
-                    if (audioCache.play('hh.mp3') ==
-                        audioCache.play('hh.mp3')) {
-                      audioCache.play('hh.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'خ') {
-                    if (audioCache.play('خروف.mp3') ==
-                        audioCache.play('خروف.mp3')) {
-                      audioCache.play('خروف.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'د') {
-                    if (audioCache.play('ديك.mp3') ==
-                        audioCache.play('ديك.mp3')) {
-                      audioCache.play('ديك.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ذ') {
-                    if (audioCache.play('ذئب.mp3') ==
-                        audioCache.play('ذئب.mp3')) {
-                      audioCache.play('ذئب.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ر') {
-                    if (audioCache.play('رقون.mp3') ==
-                        audioCache.play('رقون.mp3')) {
-                      audioCache.play('رقون.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ز') {
-                    if (audioCache.play('زرافة.mp3') ==
-                        audioCache.play('زرافة.mp3')) {
-                      audioCache.play('زرافة.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'س') {
-                    if (audioCache.play('سنجاب.mp3') ==
-                        audioCache.play('سنجاب.mp3')) {
-                      audioCache.play('سنجاب.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ش') {
-                    if (audioCache.play('شبل.mp3') ==
-                        audioCache.play('شبل.mp3')) {
-                      audioCache.play('شبل.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ص') {
-                    if (audioCache.play('صقر.mp3') ==
-                        audioCache.play('صقر.mp3')) {
-                      audioCache.play('صقر.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ض') {
-                    if (audioCache.play('ضفدع.mp3') ==
-                        audioCache.play('ضفدع.mp3')) {
-                      audioCache.play('ضفدع.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ط') {
-                    if (audioCache.play('طاووس.mp3') ==
-                        audioCache.play('طاووس.mp3')) {
-                      audioCache.play('طاووس.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ظ') {
-                    if (audioCache.play('ظبي.mp3') ==
-                        audioCache.play('ظبي.mp3')) {
-                      audioCache.play('ظبي.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ع') {
-                    if (audioCache.play('عصفور.mp3') ==
-                        audioCache.play('عصفور.mp3')) {
-                      audioCache.play('عصفور.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'غ') {
-                    if (audioCache.play('غزال.mp3') ==
-                        audioCache.play('غزال.mp3')) {
-                      audioCache.play('غزال.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ف') {
-                    if (audioCache.play('فيل.mp3') ==
-                        audioCache.play('فيل.mp3')) {
-                      audioCache.play('فيل.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ق') {
-                    if (audioCache.play('قطة.mp3') ==
-                        audioCache.play('قطة.mp3')) {
-                      audioCache.play('قطة.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ك') {
-                    if (audioCache.play('كلب.mp3') ==
-                        audioCache.play('كلب.mp3')) {
-                      audioCache.play('كلب.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
+                options: CarouselOptions(
+                    height: 400.0,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    aspectRatio: 16 / 9,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enableInfiniteScroll: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 500),
+                    autoPlayInterval: Duration(seconds: 6),
+                    viewportFraction: 0.8,
+                    onPageChanged: (index, reason) {
+                      if (word[index] == 'الحروف العربية') {}
+                      if (word[index] == 'أ') {
+                        if (audioCache.play('aa.mp3') ==
+                            audioCache.play('aa.mp3')) {
+                          audioCache.play('aa.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ب') {
+                        if (audioCache.play('bb.mp3') ==
+                            audioCache.play('bb.mp3')) {
+                          audioCache.play('bb.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ت') {
+                        if (audioCache.play('tt.mp3') ==
+                            audioCache.play('tt.mp3')) {
+                          audioCache.play('tt.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ث') {
+                        if (audioCache.play('ss.mp3') ==
+                            audioCache.play('ss.mp3')) {
+                          audioCache.play('ss.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ج') {
+                        if (audioCache.play('gg.mp3') ==
+                            audioCache.play('gg.mp3')) {
+                          audioCache.play('gg.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ح') {
+                        if (audioCache.play('hh.mp3') ==
+                            audioCache.play('hh.mp3')) {
+                          audioCache.play('hh.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'خ') {
+                        if (audioCache.play('خروف.mp3') ==
+                            audioCache.play('خروف.mp3')) {
+                          audioCache.play('خروف.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'د') {
+                        if (audioCache.play('ديك.mp3') ==
+                            audioCache.play('ديك.mp3')) {
+                          audioCache.play('ديك.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ذ') {
+                        if (audioCache.play('ذئب.mp3') ==
+                            audioCache.play('ذئب.mp3')) {
+                          audioCache.play('ذئب.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ر') {
+                        if (audioCache.play('رقون.mp3') ==
+                            audioCache.play('رقون.mp3')) {
+                          audioCache.play('رقون.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ز') {
+                        if (audioCache.play('زرافة.mp3') ==
+                            audioCache.play('زرافة.mp3')) {
+                          audioCache.play('زرافة.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'س') {
+                        if (audioCache.play('سنجاب.mp3') ==
+                            audioCache.play('سنجاب.mp3')) {
+                          audioCache.play('سنجاب.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ش') {
+                        if (audioCache.play('شبل.mp3') ==
+                            audioCache.play('شبل.mp3')) {
+                          audioCache.play('شبل.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ص') {
+                        if (audioCache.play('صقر.mp3') ==
+                            audioCache.play('صقر.mp3')) {
+                          audioCache.play('صقر.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ض') {
+                        if (audioCache.play('ضفدع.mp3') ==
+                            audioCache.play('ضفدع.mp3')) {
+                          audioCache.play('ضفدع.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ط') {
+                        if (audioCache.play('طاووس.mp3') ==
+                            audioCache.play('طاووس.mp3')) {
+                          audioCache.play('طاووس.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ظ') {
+                        if (audioCache.play('ظبي.mp3') ==
+                            audioCache.play('ظبي.mp3')) {
+                          audioCache.play('ظبي.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ع') {
+                        if (audioCache.play('عصفور.mp3') ==
+                            audioCache.play('عصفور.mp3')) {
+                          audioCache.play('عصفور.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'غ') {
+                        if (audioCache.play('غزال.mp3') ==
+                            audioCache.play('غزال.mp3')) {
+                          audioCache.play('غزال.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ف') {
+                        if (audioCache.play('فيل.mp3') ==
+                            audioCache.play('فيل.mp3')) {
+                          audioCache.play('فيل.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ق') {
+                        if (audioCache.play('قطة.mp3') ==
+                            audioCache.play('قطة.mp3')) {
+                          audioCache.play('قطة.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ك') {
+                        if (audioCache.play('كلب.mp3') ==
+                            audioCache.play('كلب.mp3')) {
+                          audioCache.play('كلب.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
 
-                  if (word[index] == 'م') {
-                    if (audioCache.play('ماعز.mp3') ==
-                        audioCache.play('ماعز.mp3')) {
-                      audioCache.play('ماعز.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ن') {
-                    if (audioCache.play('نمر.mp3') ==
-                        audioCache.play('نمر.mp3')) {
-                      audioCache.play('نمر.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ه') {
-                    if (audioCache.play('هدهد.mp3') ==
-                        audioCache.play('هدهد.mp3')) {
-                      audioCache.play('هدهد.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'و') {
-                    if (audioCache.play('وحيد.mp3') ==
-                        audioCache.play('وحيد.mp3')) {
-                      audioCache.play('وحيد.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                  if (word[index] == 'ي') {
-                    if (audioCache.play('يمامة.mp3') ==
-                        audioCache.play('يمامة.mp3')) {
-                      audioCache.play('يمامة.mp3');
-                    } else {
-                      advancePlayer.stop();
-                    }
-                  }
-                },
+                      if (word[index] == 'م') {
+                        if (audioCache.play('ماعز.mp3') ==
+                            audioCache.play('ماعز.mp3')) {
+                          audioCache.play('ماعز.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ن') {
+                        if (audioCache.play('نمر.mp3') ==
+                            audioCache.play('نمر.mp3')) {
+                          audioCache.play('نمر.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ه') {
+                        if (audioCache.play('هدهد.mp3') ==
+                            audioCache.play('هدهد.mp3')) {
+                          audioCache.play('هدهد.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'و') {
+                        if (audioCache.play('وحيد.mp3') ==
+                            audioCache.play('وحيد.mp3')) {
+                          audioCache.play('وحيد.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                      if (word[index] == 'ي') {
+                        if (audioCache.play('يمامة.mp3') ==
+                            audioCache.play('يمامة.mp3')) {
+                          audioCache.play('يمامة.mp3');
+                        } else {
+                          advancePlayer.stop();
+                        }
+                      }
+                    }),
                 items: <Widget>[
                   Padding(
                     padding: EdgeInsets.all(10.0),
